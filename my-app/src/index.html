@@ -1,12 +1,72 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="./index.ts" type="module" defer></script>
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./index.ts" type="module" defer></script>
+    <title>«Приложение - Аудиоплеер»</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container">
+        <!-- Header - top -->
+        <div class="header__logo">
+          <a href="#" class="header__logo-link">
+            <svg class="header__logo" width="33" height="28" aria-hidden="true">
+              <use xlink:href="./images/sprite.svg#logo-img-desktop"></use>
+            </svg>
+            <svg
+              class="header__logo-text"
+              width="142"
+              height="13"
+              aria-hidden="true"
+            >
+              <use xlink:href="./images/sprite.svg#logo-text"></use>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Форма поиска -->
+        <form class="questions__form" action="/search" method="get">
+          <!-- <label for="search-input">Поиск по сайту:</label> -->
+          <input
+            class="custom-input__search"
+            type="search"
+            id="search-input"
+            name="q"
+            placeholder="Что будем искать?" required
+          />
+          <button class="questions__btn btn" type="submit">
+            <svg
+              class="questions__img"
+              width="24"
+              height="24"
+              aria-hidden="true"
+            >
+              <use xlink:href="./images/sprite.svg#magnifying"></use>
+            </svg>
+          </button>
+        </form>
+
+        <div class="header__user-item">
+          <button class="header__user-btn" type="button">
+             <img class="header__user-img" src="images/foto-user.png" alt="Фотография пользователя" height="42" width="42">
+            <svg
+              class="header__user-icon"
+             width="6" 
+             height="10"
+              aria-hidden="true"
+            >
+              <use xlink:href="./images/sprite.svg#arrow"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+   
+    </main>
+  </body>
 </html>
