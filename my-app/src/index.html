@@ -3,70 +3,189 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="./index.ts" type="module" defer></script>
+    <script src="./ts/index.ts"  type="module" defer></script>
+    <link rel="stylesheet" href="css/style.css" />
     <title>«Приложение - Аудиоплеер»</title>
   </head>
 
   <body>
     <header class="header">
       <div class="container">
-        <!-- Header - top -->
-        <div class="header__logo">
-          <a href="#" class="header__logo-link">
-            <svg class="header__logo" width="33" height="28" aria-hidden="true">
-              <use xlink:href="./images/sprite.svg#logo-img-desktop"></use>
-            </svg>
-            <svg
-              class="header__logo-text"
-              width="142"
-              height="13"
-              aria-hidden="true"
-            >
-              <use xlink:href="./images/sprite.svg#logo-text"></use>
-            </svg>
-          </a>
-        </div>
+        <!-- Header  -->
+        <div class="header__wrapper">
+          <div class="header__logo">
+            <a href="#" class="header__logo-link">
+              <svg
+                class="header__logo-img"
+                width="33"
+                height="28"
+                aria-hidden="true"
+              >
+                <use xlink:href="./images/sprite.svg#logo-img-desktop"></use>
+              </svg>
+              <svg
+                class="header__logo-text"
+                width="142"
+                height="13"
+                aria-hidden="true"
+              >
+                <use xlink:href="./images/sprite.svg#logo-text"></use>
+              </svg>
+            </a>
+          </div>
 
-        <!-- Форма поиска -->
-        <form class="questions__form" action="/search" method="get">
-          <!-- <label for="search-input">Поиск по сайту:</label> -->
-          <input
-            class="custom-input__search"
-            type="search"
-            id="search-input"
-            name="q"
-            placeholder="Что будем искать?" required
-          />
-          <button class="questions__btn btn" type="submit">
-            <svg
-              class="questions__img"
-              width="24"
-              height="24"
-              aria-hidden="true"
-            >
-              <use xlink:href="./images/sprite.svg#magnifying"></use>
-            </svg>
-          </button>
-        </form>
+          <!-- Форма поиска -->
+          <div class="header__center">
+            <form class="header__form" action="/search" method="get">
+              <div class="custom-input">
+                <input
+                  class="custom-input__search"
+                  type="search"
+                  id="search-input"
+                  name="q"
+                  placeholder="ЧТО БУДЕМ ИСКАТЬ?"
+                  required
+                />
+                <button class="custom-input__btn btn" type="submit">
+                  <svg
+                    class="custom-input__img"
+                    width="24"
+                    height="24"
+                    aria-hidden="true"
+                  >
+                    <use xlink:href="./images/sprite.svg#magnifying"></use>
+                  </svg>
+                </button>
+              </div>
+            </form>
 
-        <div class="header__user-item">
-          <button class="header__user-btn" type="button">
-             <img class="header__user-img" src="images/foto-user.png" alt="Фотография пользователя" height="42" width="42">
-            <svg
-              class="header__user-icon"
-             width="6" 
-             height="10"
-              aria-hidden="true"
-            >
-              <use xlink:href="./images/sprite.svg#arrow"></use>
-            </svg>
-          </button>
+            <button class="header__user-btn btn" type="button">
+              <div class="header__user-wrapper">
+                <img
+                  class="header__user-img"
+                  src="images/foto-user.png"
+                  alt="Фотография пользователя"
+                  height="42"
+                  width="42"
+                />
+                <span class="header__user-text">username</span>
+              </div>
+              <svg
+                class="header__user-icon"
+                width="6"
+                height="10"
+                aria-hidden="true"
+              >
+                <use xlink:href="./images/sprite.svg#arrow"></use>
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
     </header>
-
     <main>
-   
+      <section class="catalog">
+        <h1 class="visually-hidden">Аудифайлы и треки</h1>
+        <div class="container">
+          <!-- <h1 class="catalog__title">Аудифайлы и треки</h1> -->
+          <div class="catalog__wrapper">
+            <div class="catalog__wrapper-left">
+              <ul class="catalog__wrapper-list">
+                <li class="catalog__wrapper-item">
+                  <button
+                    class="catalog__favorites-btn btn"
+                    type="button"
+                    aria-label="Выбрать меню"
+                  >
+                    <svg
+                      class="catalog__icon"
+                      width="32"
+                      height="32"
+                      aria-hidden="true"
+                    >
+                      <use xlink:href="./images/sprite.svg#note-img"></use>
+                    </svg>
+                    <span class="catalog__text">Избранное</span>
+                  </button>
+                </li>
+                <li class="catalog__wrapper-item">
+                  <button
+                    class="catalog__audio-btn btn"
+                    type="button"
+                    aria-label="Выбрать меню"
+                  >
+                    <svg
+                      class="catalog__icon"
+                      width="32"
+                      height="32"
+                      aria-hidden="true"
+                    >
+                      <use xlink:href="./images/sprite.svg#note-img"></use>
+                    </svg>
+                    <span class="catalog__text">Аудиокомпозиции</span>
+                  </button>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Треки и аудио -->
+            <div class="catalog__wrapper-center">
+              <h2 class="catalog__title">Аудифайлы и треки</h2>
+
+              <!-- Карточка трека  -->
+              <table class="catalog__table" id="catalog-table">
+                <thead class="catalog__table-title">
+                  <tr class="catalog__table-list">
+                    <th class="catalog__table-text">№</th>
+                    <th class="catalog__table-text">НАЗВАНИЕ</th>
+                    <th class="catalog__table-text">АЛЬБОМ</th>
+                    <th class="catalog__table-text">
+                      <svg
+                        class="catalog__table-icon"
+                        width="16"
+                        height="16"
+                        aria-hidden="true"
+                      >
+                        <use xlink:href="./images/sprite.svg#calendar"></use>
+                      </svg>
+                    </th>
+                    <th class="catalog__table-text">
+                      <svg
+                        class="catalog__table-icon"
+                        width="16"
+                        height="16"
+                        aria-hidden="true"
+                      >
+                        <use xlink:href="./images/sprite.svg#time"></use>
+                      </svg>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody id="treck-tbody">
+
+
+                  <!-- Rows will be inserted here -->
+                   
+                </tbody>
+              </table>
+
+              <div class="catalog__pagination">
+                <ul class="catalog__pagination-list">
+                  <li class="catalog__pagination-item">
+                    <button class="catalog__pagination-link">1</button>
+                  </li>
+                  <li class="catalog__pagination-item">
+                    <button class="catalog__pagination-link">2</button>
+                  </li>
+                  <li class="catalog__pagination-item">
+                    <button class="catalog__pagination-link">3</button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   </body>
 </html>
