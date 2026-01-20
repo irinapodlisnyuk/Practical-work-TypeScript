@@ -1,7 +1,7 @@
 /* Vendor */
 /* ------------------------------------ */
-@import "vendor/swiper.scss";
-@import "vendor/tippy.scss";
+@import "./vendor/swiper.scss";
+@import "./vendor/tippy.scss";
 
 /* Global */
 /* ------------------------------------ */
@@ -18,6 +18,11 @@
 /* ------------------------------------ */
 
 @import "./blocks/_header";
+@import "./blocks/_custom-input";
+@import "./blocks/_btn";
+@import "./blocks/_catalog";
+@import "./blocks/_catalog__form";
+@import "./blocks/_custom-radio";
 
 
 

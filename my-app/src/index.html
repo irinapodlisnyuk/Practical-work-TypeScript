@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="./ts/index.ts"  type="module" defer></script>
+    <script src="./ts/index.ts" type="module" defer></script>
     <link rel="stylesheet" href="css/style.css" />
     <title>«Приложение - Аудиоплеер»</title>
   </head>
@@ -11,7 +11,6 @@
   <body>
     <header class="header">
       <div class="container">
-        <!-- Header  -->
         <div class="header__wrapper">
           <div class="header__logo">
             <a href="#" class="header__logo-link">
@@ -89,11 +88,61 @@
         <div class="container">
           <!-- <h1 class="catalog__title">Аудифайлы и треки</h1> -->
           <div class="catalog__wrapper">
-            <div class="catalog__wrapper-left">
+            <form class="catalog__form" action="#" method="POST">
+              <fieldset class="catalog__form-group">
+                <ul class="catalog__form-list">
+                  <li class="catalog__form-item">
+                    <div class="custom-radio">
+                      <input
+                        class="custom-radio__field visually-hidden"
+                        id="radio-favorites"
+                        type="radio"
+                        name="playlist"
+                        value="favorites"
+                      />
+                      <label class="custom-radio__label" for="radio-favorites">
+                        <svg
+                          class="catalog__icon"
+                          width="32"
+                          height="32"
+                          aria-hidden="true"
+                        >
+                          <use xlink:href="./images/sprite.svg#note-img"></use>
+                        </svg>
+                        <span class="custom-radio__text">Избранное</span>
+                      </label>
+                    </div>
+                  </li>
+                  <li class="catalog__form-item">
+                    <div class="custom-radio">
+                      <input
+                        class="custom-radio__field visually-hidden"
+                        id="radio-audio"
+                        type="radio"
+                        name="playlist"
+                        value="audio"
+                      />
+                      <label class="custom-radio__label" for="radio-audio">
+                        <svg
+                          class="catalog__icon"
+                          width="32"
+                          height="32"
+                          aria-hidden="true"
+                        >
+                          <use xlink:href="./images/sprite.svg#note-img"></use>
+                        </svg>
+                        <span class="custom-radio__text">Аудиокомпозиции</span>
+                      </label>
+                    </div>
+                  </li>
+                </ul>
+              </fieldset>
+            </form>
+            <!-- <div class="catalog__wrapper-left">
               <ul class="catalog__wrapper-list">
                 <li class="catalog__wrapper-item">
                   <button
-                    class="catalog__favorites-btn btn"
+                    class="catalog__wrapper-btn catalog__wrapper-btn--favorites btn"
                     type="button"
                     aria-label="Выбрать меню"
                   >
@@ -110,7 +159,7 @@
                 </li>
                 <li class="catalog__wrapper-item">
                   <button
-                    class="catalog__audio-btn btn"
+                    class="catalog__wrapper-btn catalog__wrapper-btn--audio btn"
                     type="button"
                     aria-label="Выбрать меню"
                   >
@@ -126,7 +175,7 @@
                   </button>
                 </li>
               </ul>
-            </div>
+            </div> -->
 
             <!-- Треки и аудио -->
             <div class="catalog__wrapper-center">
@@ -162,10 +211,7 @@
                   </tr>
                 </thead>
                 <tbody id="treck-tbody">
-
-
                   <!-- Rows will be inserted here -->
-                   
                 </tbody>
               </table>
 

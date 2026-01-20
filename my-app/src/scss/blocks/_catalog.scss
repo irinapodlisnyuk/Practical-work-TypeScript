@@ -1,0 +1,35 @@
+.catalog {
+    
+  &__wrapper {
+    height:  100vh;
+    margin: 0px -25px;
+    display: grid;
+    grid-template-columns: 290px 1fr;
+  }
+
+
+//   &__wrapper-list {
+//     display: flex;
+//     flex-direction: column;
+//     gap: 30px;
+//     list-style: none;
+//     margin: 0 auto;
+//     padding: 0;
+//   }
+
+//   &__wrapper-btn {
+//     width: 100%;
+//     display: flex;
+//     align-items: center;
+//     gap: 12px;
+//     padding: 0 0 0 30px;
+//     background-color: transparent;
+//   }
+
+//   &__text {
+//     font-weight: 400;
+//     font-size: 20px;
+//     line-height: 24px;
+//     color: $color-tangaroa;
+//   }
+}

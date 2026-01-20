@@ -1,110 +1,112 @@
 .header {
-  &__top {
-    padding: 18px 0;
+  // padding: 15px 0 0;
+
+  &__wrapper {
+    margin: 0px -25px;
+    display: grid;
+    grid-template-columns: 289px 1fr;
+    gap: 47px;
+  }
+
+  &__logo {
+    height: 69px;
     display: flex;
+    justify-content: center;
     align-items: center;
-    border-bottom: 1px solid $color-solitude;
+    border-right: 2px solid $color-whiteSmoke;
   }
 
   &__logo-link {
-    margin: 0 56px 0 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
 
-    svg {
-      height: 26px;
-      width: 140px;
+    &:hover .header__logo-img {
+      color: $color-international-orangee;
+    }
+    &:hover .header__logo-text {
+      color: $color-black-pear;
     }
   }
 
-  &__catalog-btn {
-    background-color: transparent;
-    border: 1px solid $color-granny-smith-apple;
-    border-radius: 6px;
-    padding: 10px 20px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin: 0 40px 0 0;
+  &__logo-img {
+    color: $color-burnt-orange;
+    transition: color $transition-300;
   }
 
-  &__catalog-text {
-    font-size: 14px;
-    line-height: 19.6px;
+  &__logo-text {
+    color: $color-tangaroa;
+    transition: color $transition-300;
   }
 
-  &__user-list {
-    margin: 0 0 0 auto;
-    display: flex;
-    padding: 0;
-    list-style: none;
-    gap: 20px;
-    position: relative;
+  &__center {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 798px 246px;
+    gap: 30px;
+    align-items: end;
   }
 
   &__user-btn {
-    background-color: transparent;
-    border: none;
-    padding: 0;
-    display: flex;
+    background-color: $color-whiteSmoke;
+    display: grid;
     align-items: center;
-    font-size: 12px;
-    line-height: 16.8px;
-    gap: 5px;
-    position: relative;
+    grid-template-columns: 1fr 16px;
+    gap: 94px;
+    padding: 5px 10px 5px 13px;
+    transition: background-color $transition-300;
 
-    svg {
-      height: 24px;
-      width: 24px;
+    &:hover {
+      background-color: $color-whisper;
+    }
+
+    &:hover .header__user-icon,
+    &:active .header__user-icon  {
+      color: $color-international-orangee;
+    }
+
+    &:active {
+      background-color: $color-dark-gray;
+    }
+
+    &:hover,
+    &:focus-visible {
+      .header__user-text::after {
+        transform: scale(1);
+      }
     }
   }
 
-  &__user-count {
-    height: 20px;
-    width: 20px;
-    border-radius: 50%;
-    background-color: $color-granny-smith-apple;
-    position: absolute;
-    top: -5px;
-    right: -13px;
+  &__user-wrapper {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid $color-white;
-  }
-
-  &__bottom {
-    padding: 18px 0;
-    display: flex;
+    gap: 8px;
     align-items: center;
   }
 
-  &__nav-list {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-
-  &__nav-link {
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 22.4px;
-  }
-
-  &__contacts {
-    margin: 0 0 0 auto;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-  }
-
-  &__btn {
-    width: 170px;
-  }
-
-  &__phone {
+  &__user-text {
+    font-weight: 400;
     font-size: 14px;
-    line-height: 19.6px;
+    line-height: 12px;
+    letter-spacing: 0.01em;
+    color: $color-nero;
+    position: relative;
+
+    &::after {
+      content: "";
+      height: 1px;
+      width: 100%;
+      background-color: currentColor;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      transform: scale(0, 1);
+      transform-origin: left;
+      transition: transform $transition-300;
+    }
+  }
+
+  &__user-icon {
+    color: $color-burnt-orange;
   }
 }
