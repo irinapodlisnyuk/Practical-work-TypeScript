@@ -1,8 +1,14 @@
 .custom-radio {
-
   .custom-radio__field:checked + .custom-radio__label {
     //border: 1px solid $color-white;
     background: $color-white;
+  }
+
+  &__field:hover,
+  &__field:focus {
+    .custom-radio__text::after {
+      transform: scale(1);
+    }
   }
 
   &__label {
@@ -10,9 +16,15 @@
     display: flex;
     align-items: center;
     gap: 12px;
-    padding:  9px 9px 5px 30px;
-
+    padding: 9px 9px 9px 30px;
     cursor: pointer;
+
+    &:hover,
+    &:focus {
+      .custom-radio__text::after {
+        transform: scale(1);
+      }
+    }
   }
 
   &__text {
@@ -20,5 +32,32 @@
     font-size: 20px;
     line-height: 24px;
     color: $color-tangaroa;
+    transition: color $transition-300;
+    position: relative;
+
+    // &:hover,
+    // &:focus {
+    //     color: $color-dark-gray;
+    //   .custom-radio__text::after {
+    //     transform: scale(1);
+    //   }
+    // }
+
+    &:hover {
+      color: $color-dark-gray;
+    }
+
+    &::after {
+      content: "";
+      height: 1px;
+      width: 100%;
+      background-color: currentColor;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      transform: scale(0, 1);
+      transform-origin: left;
+      transition: transform $transition-300;
+    }
   }
 }

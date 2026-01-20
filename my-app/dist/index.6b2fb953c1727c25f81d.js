@@ -1,0 +1,1 @@
+(()=>{"use strict";window.addEventListener("DOMContentLoaded",function(){var e,t;e=document.querySelector(".header__user-btn"),t=document.querySelector(".user-card"),e.addEventListener("click",function(e){e.preventDefault(),t.classList.toggle("user-card--active"),console.log("work ")})})})();

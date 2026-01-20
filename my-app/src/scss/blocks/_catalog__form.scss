@@ -1,22 +1,6 @@
 .catalog__form {
-  padding: 46px 0 0;
+  padding: 37px 0 0;
   background-color: $color-whisper;
-
-  &__form-group {
-    padding: 0;
-    margin: 0;
-    border: none;
-  }
-
-  &__form-list {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    list-style: none;
-    margin: 0 auto;
-    padding: 0;
-    list-style: none;
-  }
 }
 
 .catalog__form-group {
@@ -26,7 +10,10 @@
 }
 
 .catalog__form-list {
+  display: flex;
+  flex-direction: column;
   list-style: none;
+  gap: 13px;
   margin: 0;
   padding: 0;
 }

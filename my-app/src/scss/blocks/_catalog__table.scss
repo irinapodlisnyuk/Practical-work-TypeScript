@@ -1,0 +1,21 @@
+.catalog__table {
+  margin: 0 0 20px;
+  &-list {
+    display: grid;
+    grid-template-columns: 40px 432px 262px 239px 99px;
+    justify-items: start;
+    align-items: center;
+    border-bottom: 1px solid $color-whisper;
+  }
+
+  &-title {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: $color-dark-Gray;
+    padding: 10px 0 5px 9px;
+    
+  }
+}

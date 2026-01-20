@@ -1,35 +1,21 @@
 .catalog {
-    
   &__wrapper {
-    height:  100vh;
+    height: 100vh;
     margin: 0px -25px;
     display: grid;
-    grid-template-columns: 290px 1fr;
+    grid-template-columns: 289px 1fr;
   }
 
+  &__wrapper-center {
+    padding: 35px 0 0 46px;
+  }
 
-//   &__wrapper-list {
-//     display: flex;
-//     flex-direction: column;
-//     gap: 30px;
-//     list-style: none;
-//     margin: 0 auto;
-//     padding: 0;
-//   }
-
-//   &__wrapper-btn {
-//     width: 100%;
-//     display: flex;
-//     align-items: center;
-//     gap: 12px;
-//     padding: 0 0 0 30px;
-//     background-color: transparent;
-//   }
-
-//   &__text {
-//     font-weight: 400;
-//     font-size: 20px;
-//     line-height: 24px;
-//     color: $color-tangaroa;
-//   }
+  &__title {
+    margin: 0 0 17px;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 36px;
+    letter-spacing: 0.02em;
+    color: $color-tangaroa;
+  }
 }

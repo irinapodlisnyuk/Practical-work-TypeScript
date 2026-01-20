@@ -16,6 +16,8 @@
   },
   "devDependencies": {
     "css-loader": "^7.1.2",
+    "filemanager-webpack-plugin": "^9.0.1",
+    "html-webpack-plugin": "^5.6.6",
     "parcel": "^2.16.3",
     "sass": "^1.97.2",
     "sass-loader": "^16.0.6",
