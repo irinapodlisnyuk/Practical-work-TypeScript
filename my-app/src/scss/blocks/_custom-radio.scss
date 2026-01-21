@@ -34,6 +34,7 @@
     color: $color-tangaroa;
     transition: color $transition-300;
     position: relative;
+    user-select: none;
 
     // &:hover,
     // &:focus {

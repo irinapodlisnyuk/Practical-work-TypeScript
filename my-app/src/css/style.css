@@ -1256,12 +1256,18 @@ button {
   gap: 30px;
   align-items: end;
 }
-.header__user-btn {
-  background-color: #F5F5F5;
-  display: grid;
+.header__user {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  grid-template-columns: 1fr 16px;
-  gap: 94px;
+}
+.header__user-btn {
+  position: relative;
+  width: 100%;
+  background-color: #F5F5F5;
+  display: flex;
+  gap: 8px;
+  align-items: center;
   padding: 5px 10px 5px 13px;
   transition: background-color ease-in 0.3s;
 }
@@ -1276,11 +1282,6 @@ button {
 }
 .header__user-btn:hover .header__user-text::after, .header__user-btn:focus-visible .header__user-text::after {
   transform: scale(1);
-}
-.header__user-wrapper {
-  display: flex;
-  gap: 8px;
-  align-items: center;
 }
 .header__user-text {
   font-weight: 400;
@@ -1304,6 +1305,10 @@ button {
 }
 .header__user-icon {
   color: #FC6D3E;
+  position: absolute;
+  top: 50%;
+  right: 13px;
+  transform: translateY(-50%);
 }
 
 .custom-input {
@@ -1421,6 +1426,9 @@ button {
   color: #11253d;
   transition: color ease-in 0.3s;
   position: relative;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .custom-radio__text:hover {
   color: #AAAAAA;

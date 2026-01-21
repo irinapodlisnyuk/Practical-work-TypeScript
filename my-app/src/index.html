@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="./ts/index.ts" type="module" defer></script>
+    <script src="./ts/index.ts" type="module"></script>
     <link rel="stylesheet" href="css/style.css" />
     <title>«Приложение - Аудиоплеер»</title>
   </head>
@@ -57,9 +57,8 @@
                 </button>
               </div>
             </form>
-
-            <button class="header__user-btn user-card btn" type="button">
-              <div class="header__user-wrapper">
+            <div class="header__user">
+              <button class="header__user-btn user-card btn" type="button">
                 <img
                   class="header__user-img"
                   src="images/foto-user.png"
@@ -68,8 +67,7 @@
                   width="42"
                 />
                 <span class="header__user-title">username</span>
-              </div>
-              <svg
+                  <svg
                 class="header__user-icon"
                 width="6"
                 height="10"
@@ -77,7 +75,9 @@
               >
                 <use xlink:href="./images/sprite.svg#arrow"></use>
               </svg>
-            </button>
+              </button>
+            
+            </div>
           </div>
         </div>
       </div>

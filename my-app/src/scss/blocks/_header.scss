@@ -47,13 +47,24 @@
     gap: 30px;
     align-items: end;
   }
+  &__user {
+   //max-width: 246px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
   &__user-btn {
+    position: relative;
+    width: 100%;
     background-color: $color-whiteSmoke;
-    display: grid;
+    display: flex;
+    gap: 8px;
     align-items: center;
-    grid-template-columns: 1fr 16px;
-    gap: 94px;
+    // display: grid;
+    // align-items: center;
+    // grid-template-columns: 1fr 16px;
+    // gap: 94px;
     padding: 5px 10px 5px 13px;
     transition: background-color $transition-300;
 
@@ -62,7 +73,7 @@
     }
 
     &:hover .header__user-icon,
-    &:active .header__user-icon  {
+    &:active .header__user-icon {
       color: $color-international-orangee;
     }
 
@@ -76,12 +87,6 @@
         transform: scale(1);
       }
     }
-  }
-
-  &__user-wrapper {
-    display: flex;
-    gap: 8px;
-    align-items: center;
   }
 
   &__user-text {
@@ -108,5 +113,9 @@
 
   &__user-icon {
     color: $color-burnt-orange;
+    position: absolute;
+    top: 50%;
+    right: 13px;
+    transform: translateY(-50%);
   }
 }
