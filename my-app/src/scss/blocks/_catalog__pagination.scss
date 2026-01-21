@@ -1,4 +1,8 @@
 .catalog__pagination {
+
+     @include vp-767 {
+      display: none;
+    }
   &-list {
     display: flex;
     justify-content: center;

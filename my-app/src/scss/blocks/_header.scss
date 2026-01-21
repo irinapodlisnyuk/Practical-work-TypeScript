@@ -6,6 +6,20 @@
     display: grid;
     grid-template-columns: 289px 1fr;
     gap: 47px;
+
+    @include vp-1023 {
+      margin: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    @include vp-767 {
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
   }
 
   &__logo {
@@ -14,6 +28,10 @@
     justify-content: center;
     align-items: center;
     border-right: 2px solid $color-whiteSmoke;
+
+    @include vp-767 {
+      border-right: none;
+    }
   }
 
   &__logo-link {
@@ -33,6 +51,11 @@
   &__logo-img {
     color: $color-burnt-orange;
     transition: color $transition-300;
+
+    @include vp-767 {
+      width: 27px;
+      height: 23px;
+    }
   }
 
   &__logo-text {
@@ -43,12 +66,27 @@
   &__center {
     height: 100%;
     display: grid;
-    grid-template-columns: 798px 246px;
+    grid-template-columns: 1fr 246px;
     gap: 30px;
     align-items: end;
+
+    @include vp-1023 {
+      gap: 0;
+    }
+
+    @include vp-767 {
+      display: flex;
+      align-items: flex-end;
+    }
+  }
+
+  &__form {
+    @include vp-767 {
+      display: none;
+    }
   }
   &__user {
-   //max-width: 246px;
+    //max-width: 246px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -61,10 +99,6 @@
     display: flex;
     gap: 8px;
     align-items: center;
-    // display: grid;
-    // align-items: center;
-    // grid-template-columns: 1fr 16px;
-    // gap: 94px;
     padding: 5px 10px 5px 13px;
     transition: background-color $transition-300;
 
@@ -87,6 +121,28 @@
         transform: scale(1);
       }
     }
+
+    
+    
+    @include vp-1023 {
+    
+    }
+
+    @include vp-767 {
+      background-color: transparent;
+
+      &:hover {
+        background-color: initial;
+      }
+
+      &:active .header__user-text {
+        color: $color-international-orangee;
+      }
+      &:active .header__user-img {
+        border: 1px solid $color-international-orangee;
+        border-radius: 50%;
+      }
+    }
   }
 
   &__user-text {
@@ -96,6 +152,10 @@
     letter-spacing: 0.01em;
     color: $color-nero;
     position: relative;
+
+    @include vp-767 {
+      font-size: 12px;
+    }
 
     &::after {
       content: "";
@@ -111,11 +171,22 @@
     }
   }
 
+  &__user-img {
+    @include vp-767 {
+      width: 25px;
+      height: 25px;
+    }
+  }
+
   &__user-icon {
     color: $color-burnt-orange;
     position: absolute;
     top: 50%;
     right: 13px;
     transform: translateY(-50%);
+
+    @include vp-767 {
+      display: none;
+    }
   }
 }

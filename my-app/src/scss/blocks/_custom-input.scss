@@ -1,6 +1,14 @@
 .custom-input {
   position: relative;
 
+  @include vp-1023 {
+    display: none;
+  }
+
+  @include vp-767 {
+    display: none;
+  }
+
   &__search {
     width: 100%;
     background-color: $color-whiteSmoke;
@@ -24,7 +32,7 @@
       background-color: $color-whisper;
     }
 
-     &:hover +.custom-input__btn .custom-input__img {
+    &:hover + .custom-input__btn .custom-input__img {
       color: $color-burnt-orange;
     }
   }
@@ -44,7 +52,7 @@
       color: $color-burnt-orange;
     }
 
-     &:active .custom-input__img {
+    &:active .custom-input__img {
       color: $color-dark-gray;
     }
   }

@@ -59,24 +59,48 @@
             </form>
             <div class="header__user">
               <button class="header__user-btn user-card btn" type="button">
-                <img
+                <!-- <img
                   class="header__user-img"
                   src="images/foto-user.png"
                   alt="Фотография пользователя"
                   height="42"
                   width="42"
-                />
-                <span class="header__user-title">username</span>
-                  <svg
-                class="header__user-icon"
-                width="6"
-                height="10"
-                aria-hidden="true"
-              >
-                <use xlink:href="./images/sprite.svg#arrow"></use>
-              </svg>
+                /> -->
+
+                <picture>
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="
+                      ./images/foto-user-mobile.png 1x,
+                      ./images/foto-user@2mobile.png 2x
+                    "
+                  />
+                  <source
+                    media="(max-width: 1023px)"
+                    srcset="
+                      ./images/foto-user-dekstop.png 1x,
+                      ./images/foto-user-dekstop@2x.png 2x
+                    "
+                  />
+                  <img
+                    class="header__user-img"
+                    src="./images/foto-user-dekstop.png"
+                    srcset="./images/foto-user-dekstop@2x.png 2x"
+                    width="42"
+                    height="42"
+                    alt="Фотография пользователя"
+                  />
+                </picture>
+                <span class="header__user-text">username</span>
+                <svg
+                  class="header__user-icon"
+                  width="6"
+                  height="10"
+                  aria-hidden="true"
+                >
+                  <use xlink:href="./images/sprite.svg#arrow"></use>
+                </svg>
               </button>
-            
             </div>
           </div>
         </div>
@@ -102,12 +126,21 @@
                       />
                       <label class="custom-radio__label" for="radio-favorites">
                         <svg
-                          class="catalog__icon"
+                          class="custom-radio__icon"
                           width="32"
                           height="32"
                           aria-hidden="true"
                         >
                           <use xlink:href="./images/sprite.svg#note-img"></use>
+                        </svg>
+
+                         <svg
+                          class="custom-radio__icon  play"
+                          width="24"
+                          height="24"
+                          aria-hidden="true"
+                        >
+                          <use xlink:href="./images/sprite.svg#play-img"></use>
                         </svg>
                         <span class="custom-radio__text">Избранное</span>
                       </label>
@@ -124,12 +157,20 @@
                       />
                       <label class="custom-radio__label" for="radio-audio">
                         <svg
-                          class="catalog__icon"
+                          class="custom-radio__icon"
                           width="32"
                           height="32"
                           aria-hidden="true"
                         >
                           <use xlink:href="./images/sprite.svg#note-img"></use>
+                        </svg>
+                          <svg
+                          class="custom-radio__icon  play"
+                          width="24"
+                          height="24"
+                          aria-hidden="true"
+                        >
+                          <use xlink:href="./images/sprite.svg#play-img"></use>
                         </svg>
                         <span class="custom-radio__text">Аудиокомпозиции</span>
                       </label>
@@ -142,7 +183,7 @@
               <ul class="catalog__wrapper-list">
                 <li class="catalog__wrapper-item">
                   <button
-                    class="catalog__wrapper-btn catalog__wrapper-btn--favorites btn"
+                    class="catalog__wrapper-btn favorites btn"
                     type="button"
                     aria-label="Выбрать меню"
                   >
@@ -159,7 +200,7 @@
                 </li>
                 <li class="catalog__wrapper-item">
                   <button
-                    class="catalog__wrapper-btn catalog__wrapper-btn--audio btn"
+                    class="catalog__wrapper-btn audio btn"
                     type="button"
                     aria-label="Выбрать меню"
                   >
@@ -185,10 +226,10 @@
               <table class="catalog__table" id="catalog-table">
                 <thead class="catalog__table-title">
                   <tr class="catalog__table-list">
-                    <th class="catalog__table-title">№</th>
-                    <th class="catalog__table-title">НАЗВАНИЕ</th>
-                    <th class="catalog__table-title">АЛЬБОМ</th>
-                    <th class="catalog__table-title">
+                    <th class="catalog__table-item">№</th>
+                    <th class="catalog__table-item">НАЗВАНИЕ</th>
+                    <th class="catalog__table-item">АЛЬБОМ</th>
+                    <th class="catalog__table-item">
                       <svg
                         class="catalog__table-icon"
                         width="16"
