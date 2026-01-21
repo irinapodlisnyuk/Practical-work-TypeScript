@@ -2,6 +2,12 @@ export function btnUser() {
   const userBtnEl: HTMLElement = document.querySelector(
     ".header__user-btn",
   ) as HTMLElement;
+
+  const headerCard: HTMLElement = document.querySelector(
+    ".header__card",
+  ) as HTMLElement;
+  headerCard.classList.add("user-card");
+  
   const userEl: HTMLElement = document.querySelector(
     ".user-card",
   ) as HTMLElement;
@@ -20,5 +26,4 @@ export function btnUser() {
       });
     }
   });
-
 }
