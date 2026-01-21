@@ -33,7 +33,7 @@
       display: flex;
       gap: 8px;
       border-radius: 30px;
-      padding: 0 16px;
+      padding: 0 20px;
       height: 44px;
     }
 
@@ -42,8 +42,7 @@
       gap: 8px;
       border-radius: 30px;
       background-color: $color-white;
-      padding: 0 16px;
-      height: 44px;
+      padding: 0 20px;
     }
 
     &:hover,
@@ -66,6 +65,7 @@
     transition: color $transition-300;
     position: relative;
     user-select: none;
+     letter-spacing: 0.02em;
 
      @include vp-1023 {
         &:hover {

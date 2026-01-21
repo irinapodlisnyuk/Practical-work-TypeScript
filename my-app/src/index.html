@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="./ts/index.ts" type="module"></script>
+   
     <link rel="stylesheet" href="css/style.css" />
     <title>«Приложение - Аудиоплеер»</title>
   </head>
@@ -58,7 +58,7 @@
               </div>
             </form>
             <div class="header__user">
-              <button class="header__user-btn user-card btn" type="button">
+              <button class="header__user-btn btn" type="button">
                 <!-- <img
                   class="header__user-img"
                   src="images/foto-user.png"
@@ -71,14 +71,14 @@
                   <source
                     media="(max-width: 767px)"
                     srcset="
-                      ./images/foto-user-mobile.png 1x,
+                      ./images/foto-user-mobile.png  1x,
                       ./images/foto-user@2mobile.png 2x
                     "
                   />
                   <source
                     media="(max-width: 1023px)"
                     srcset="
-                      ./images/foto-user-dekstop.png 1x,
+                      ./images/foto-user-dekstop.png    1x,
                       ./images/foto-user-dekstop@2x.png 2x
                     "
                   />
@@ -101,6 +101,24 @@
                   <use xlink:href="./images/sprite.svg#arrow"></use>
                 </svg>
               </button>
+              <div class="header__card">
+                <!-- Пример личного кабинета -->
+                <!-- <div class="user-card__wrapper">
+                  <div class="user-card__heading">
+                    <h2 class="user-card__title">User</h2>
+                    <button class="user-card__close" type="button">
+                      <svg
+                        class="user-card__icon"
+                        width="24"
+                        height="24"
+                        aria-hidden="true"
+                      >
+                        <use xlink:href="./images/sprite.svg#icon-close"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div> -->
+              </div>
             </div>
           </div>
         </div>
@@ -134,8 +152,8 @@
                           <use xlink:href="./images/sprite.svg#note-img"></use>
                         </svg>
 
-                         <svg
-                          class="custom-radio__icon  play"
+                        <svg
+                          class="custom-radio__icon play"
                           width="24"
                           height="24"
                           aria-hidden="true"
@@ -164,8 +182,8 @@
                         >
                           <use xlink:href="./images/sprite.svg#note-img"></use>
                         </svg>
-                          <svg
-                          class="custom-radio__icon  play"
+                        <svg
+                          class="custom-radio__icon play"
                           width="24"
                           height="24"
                           aria-hidden="true"
@@ -274,5 +292,6 @@
         </div>
       </section>
     </main>
+     <script src="./ts/index.ts" type="module"></script>
   </body>
 </html>

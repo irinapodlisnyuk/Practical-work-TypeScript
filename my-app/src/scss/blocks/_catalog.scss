@@ -1,17 +1,19 @@
 .catalog {
+  @include vp-767 {
+  background-color: $color-whisper;
+  }
+
   &__wrapper {
     height: 100vh;
-    margin: 0px -25px;
+    margin: 0px -30px;
     display: grid;
     grid-template-columns: 289px 1fr;
     
-
     @include vp-1023 {
       display: flex;
       flex-direction: column;
       gap: 19px;
       margin: 0;
-      background-color: $color-whisper;
     }
 
     @include vp-767 {
@@ -24,6 +26,10 @@
 
   &__wrapper-center {
     padding: 35px 0 0 46px;
+
+      @include vp-1023 {
+        padding: 35px 0 0;
+    }
 
     @include vp-767 {
       display: none;
@@ -39,6 +45,7 @@
     color: $color-tangaroa;
 
     @include vp-1023 {
+      display: none;
     }
 
     @include vp-767 {
