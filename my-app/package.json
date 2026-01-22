@@ -5,12 +5,27 @@
   "license": "ISC",
   "author": "",
   "type": "commonjs",
+  "keywords": [
+    "howler",
+    "howler.js",
+    "audio",
+    "sound",
+    "web audio",
+    "webaudio",
+    "browser",
+    "html5",
+    "html5 audio",
+    "audio sprite",
+    "audiosprite"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack serve --mode development",
     "build": "webpack"
   },
   "dependencies": {
+    "@types/howler": "^2.2.12",
+    "howler": "^2.2.4",
     "navigo": "^8.11.1",
     "redom": "^4.3.0"
   },
