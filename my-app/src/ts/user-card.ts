@@ -76,8 +76,8 @@ export function cardUser() {
   bottomEl.appendChild(buttonRedactionEl);
   bottomEl.appendChild(buttonExitEl);
   buttonEl.append(svgEl);
-  headingEl.append(buttonEl, imgUserEl);
-  topEl.append(hEl, h3El);
+  headingEl.append(buttonEl,hEl, imgUserEl);
+  topEl.appendChild(h3El);
   cardEl.appendChild(headingEl);
   cardEl.appendChild(topEl);
   cardEl.appendChild(bottomEl);

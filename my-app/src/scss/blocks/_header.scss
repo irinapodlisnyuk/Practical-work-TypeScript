@@ -172,7 +172,7 @@
       background-color: currentColor;
       position: absolute;
       left: 0;
-      bottom: 0;
+      bottom: -1px;
       transform: scale(0, 1);
       transform-origin: left;
       transition: transform $transition-300;
