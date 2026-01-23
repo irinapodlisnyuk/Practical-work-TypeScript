@@ -1,11 +1,12 @@
 .header {
   padding: 15px 0 0;
 
-      @include vp-767 {
-      padding: 13px 0;
-    }
+  @include vp-767 {
+    padding: 13px 0;
+  }
 
   &__wrapper {
+    width: 100%;
     margin: 0px -30px;
     display: grid;
     grid-template-columns: 289px 1fr;
@@ -79,6 +80,10 @@
     grid-template-columns: 798px 246px;
     gap: 30px;
     align-items: end;
+
+    @media (max-width: 1392px) {
+      grid-template-columns: 1fr 246px;
+    }
 
     @include vp-1023 {
       grid-template-columns: 1fr 246px;
