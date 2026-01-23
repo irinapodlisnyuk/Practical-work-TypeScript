@@ -59,14 +59,6 @@
             </form>
             <div class="header__user">
               <button class="header__user-btn btn" type="button">
-                <!-- <img
-                  class="header__user-img"
-                  src="images/foto-user.png"
-                  alt="Фотография пользователя"
-                  height="42"
-                  width="42"
-                /> -->
-
                 <picture>
                   <source
                     media="(max-width: 767px)"
@@ -197,45 +189,6 @@
                 </ul>
               </fieldset>
             </form>
-            <!-- <div class="catalog__wrapper-left">
-              <ul class="catalog__wrapper-list">
-                <li class="catalog__wrapper-item">
-                  <button
-                    class="catalog__wrapper-btn favorites btn"
-                    type="button"
-                    aria-label="Выбрать меню"
-                  >
-                    <svg
-                      class="catalog__icon"
-                      width="32"
-                      height="32"
-                      aria-hidden="true"
-                    >
-                      <use xlink:href="./images/sprite.svg#note-img"></use>
-                    </svg>
-                    <span class="catalog__text">Избранное</span>
-                  </button>
-                </li>
-                <li class="catalog__wrapper-item">
-                  <button
-                    class="catalog__wrapper-btn audio btn"
-                    type="button"
-                    aria-label="Выбрать меню"
-                  >
-                    <svg
-                      class="catalog__icon"
-                      width="32"
-                      height="32"
-                      aria-hidden="true"
-                    >
-                      <use xlink:href="./images/sprite.svg#note-img"></use>
-                    </svg>
-                    <span class="catalog__text">Аудиокомпозиции</span>
-                  </button>
-                </li>
-              </ul>
-            </div> -->
-
             <!-- Треки и аудио -->
             <div class="catalog__wrapper-center">
               <h2 class="catalog__title">Аудифайлы и треки</h2>
@@ -293,7 +246,6 @@
       </section>
 
       <!--PLAYER-->
-
       <section class="player">
         <div class="container">
           <div class="player__wrapper">
@@ -326,112 +278,235 @@
 
             <!-- Controls -->
             <div class="player__controls">
-              <div class="player__controlsOuter">
-                <div class="player__controlsInner-loading" id="loading"></div>
-                <div class="player__controlsInner">
-                  <div class="player__btn" id="sortBtn">
-                    <svg
-                      class="player__btn-icon"
-                      width="16"
-                      height="16"
-                      aria-hidden="true"
-                    >
-                      <use xlink:href="./images/sprite.svg#shuffle"></use>
-                    </svg>
-                  </div>
-                  <div class="player__btn" id="prevBtn">
-                    <svg
-                      class="player__btn-icon"
-                      width="16"
-                      height="16"
-                      aria-hidden="true"
-                    >
-                      <use xlink:href="./images/sprite.svg#skipBack"></use>
-                    </svg>
-                  </div>
-                  <div class="player__btn" id="playBtn">
-                    <svg
-                      class="player__btn-play"
-                      width="12"
-                      height="15"
-                      aria-hidden="true"
-                    >
-                      <use xlink:href="./images/sprite.svg#play"></use>
-                    </svg>
-                  </div>
-                  <div class="player__btn" id="pauseBtn">
-                    <svg
-                      class="player__btn-pause"
-                      width="12"
-                      height="15"
-                      aria-hidden="true"
-                    >
-                      <use xlink:href="./images/sprite.svg#pause"></use>
-                    </svg>
-                  </div>
-                  <div class="player__btn" id="nextBtn">
-                    <svg
-                      class="player__btn-icon"
-                      width="16"
-                      height="16"
-                      aria-hidden="true"
-                    >
-                      <use xlink:href="./images/sprite.svg#next-track"></use>
-                    </svg>
-                  </div>
-                  <div class="player__btn" id="repeatBtn">
-                    <svg
-                      class="player__btn-icon"
-                      width="16"
-                      height="16"
-                      aria-hidden="true"
-                    >
-                      <use xlink:href="./images/sprite.svg#repeat"></use>
-                    </svg>
-                  </div>
+              <div class="player__controls-loading" id="loading"></div>
+              <div class="player__controlsInner">
+                <div class="player__btn" id="sortBtn">
+                  <svg
+                    class="player__btn-icon"
+                    width="16"
+                    height="16"
+                    aria-hidden="true"
+                  >
+                    <use xlink:href="./images/sprite.svg#shuffle"></use>
+                  </svg>
                 </div>
-                <!-- <div class="player__btn" id="volumeBtn"></div>  -->
-
-                <!-- Progress -->
-                <div class="player__controlsProgress">
-                  <div class="player__timer" id="timer">0:00</div>
-                  <div class="player__waveform" id="waveform"></div>
-                  <div class="player__bar" id="bar"></div>
-                  <div class="player__progress" id="progress"></div>
-                  <div class="player__duration" id="duration">0:00</div>
+                <div class="player__btn" id="prevBtn">
+                  <svg
+                    class="player__btn-icon"
+                    width="16"
+                    height="16"
+                    aria-hidden="true"
+                  >
+                    <use xlink:href="./images/sprite.svg#skipBack"></use>
+                  </svg>
                 </div>
+                <div class="player__btn" id="playBtn">
+                  <svg
+                    class="player__btn-play"
+                    width="12"
+                    height="15"
+                    aria-hidden="true"
+                  >
+                    <use xlink:href="./images/sprite.svg#play"></use>
+                  </svg>
+                </div>
+                <div class="player__btn" id="pauseBtn">
+                  <svg
+                    class="player__btn-pause"
+                    width="12"
+                    height="15"
+                    aria-hidden="true"
+                  >
+                    <use xlink:href="./images/sprite.svg#pause"></use>
+                  </svg>
+                </div>
+                <div class="player__btn" id="nextBtn">
+                  <svg
+                    class="player__btn-icon"
+                    width="16"
+                    height="16"
+                    aria-hidden="true"
+                  >
+                    <use xlink:href="./images/sprite.svg#next-track"></use>
+                  </svg>
+                </div>
+                <div class="player__btn" id="repeatBtn">
+                  <svg
+                    class="player__btn-icon"
+                    width="16"
+                    height="16"
+                    aria-hidden="true"
+                  >
+                    <use xlink:href="./images/sprite.svg#repeat"></use>
+                  </svg>
+                </div>
+              </div>
+              <!-- Progress -->
+              <div class="player__controlsProgress">
+                <div class="player__timer" id="timer">0:00</div>
+                <div class="player__waveform" id="waveform"></div>
+                <div class="player__bar" id="bar"></div>
+                <div class="player__progress" id="progress"></div>
+                <div class="player__duration" id="duration">0:00</div>
               </div>
             </div>
 
             <!-- Volume -->
-            <div class="player__volume fadeout" id="volume">
-              <!-- "<div class="player__fadeout-top">" -->
-                <svg
-                  class="player__icon"
-                  width="16"
-                  height="16"
-                  aria-hidden="true"
-                >
-                  <use xlink:href="./images/sprite.svg#speakerLow"></use>
-                </svg>
-              <!-- </div> -->
-                <div class="player__bar-volume" id="barFull"></div>
-                <div class="player__bar-volume" id="barEmpty"></div>
-                <div class="player__slider" id="sliderBtn"></div>
-          
+            <div class="player__volume">
+              <svg
+                class="player__icon"
+                width="16"
+                height="16"
+                aria-hidden="true"
+              >
+                <use xlink:href="./images/sprite.svg#speakerLow"></use>
+              </svg>
+              <div class="player__progress-track">
+                <input
+                  type="range"
+                  class="player__volume-slider"
+                  min="0"
+                  max="100"
+                  value="10"
+                  id="volume"
+                />
+                <div class="player__progressBar" id="progressBar"></div>
+              </div>
             </div>
-
-            <!-- Playlist -->
-            <!-- <div class="player__list" id="playlist">
-              <div id="list"></div>
-            </div> -->
           </div>
         </div>
       </section>
     </main>
+    <!-- <footer class="footer"> -->
+    <!-- <div class="container">
+        <div class="player__wrapper">
+          <div class="player__fail"> -->
+    <!--Фаил который проигрывается плеером-->
+    <!-- <img
+              class="player__fail-img"
+              src="./images/img-audio/rectangle.png"
+              width="60"
+              height="60"
+              alt="Постер музыкального трека"
+            />
+            <div class="player__info">
+              <div class="player__top">
+                <p class="player__top-title" id="track">Histoire Sans Nom</p>
+                <svg
+                  class="player__top-icon"
+                  width="24"
+                  height="24"
+                  aria-hidden="true"
+                >
+                  <use xlink:href="./images/sprite.svg#heart"></use>
+                </svg>
+              </div>
+              <span class="player__info-text"
+                >Ludovico Einaudi, Czech National Symphony Orchestra</span
+              >
+            </div>
+          </div> -->
+
+    <!-- Controls -->
+    <!-- <div class="player__controls">
+            <div class="player__controlsOuter">
+              <div class="player__controlsInner-loading" id="loading"></div>
+              <div class="player__controlsInner">
+                <div class="player__btn" id="sortBtn">
+                  <svg
+                    class="player__btn-icon"
+                    width="16"
+                    height="16"
+                    aria-hidden="true"
+                  >
+                    <use xlink:href="./images/sprite.svg#shuffle"></use>
+                  </svg>
+                </div>
+                <div class="player__btn" id="prevBtn">
+                  <svg
+                    class="player__btn-icon"
+                    width="16"
+                    height="16"
+                    aria-hidden="true"
+                  >
+                    <use xlink:href="./images/sprite.svg#skipBack"></use>
+                  </svg>
+                </div>
+                <div class="player__btn" id="playBtn">
+                  <svg
+                    class="player__btn-play"
+                    width="12"
+                    height="15"
+                    aria-hidden="true"
+                  >
+                    <use xlink:href="./images/sprite.svg#play"></use>
+                  </svg>
+                </div>
+                <div class="player__btn" id="pauseBtn">
+                  <svg
+                    class="player__btn-pause"
+                    width="12"
+                    height="15"
+                    aria-hidden="true"
+                  >
+                    <use xlink:href="./images/sprite.svg#pause"></use>
+                  </svg>
+                </div>
+                <div class="player__btn" id="nextBtn">
+                  <svg
+                    class="player__btn-icon"
+                    width="16"
+                    height="16"
+                    aria-hidden="true"
+                  >
+                    <use xlink:href="./images/sprite.svg#next-track"></use>
+                  </svg>
+                </div>
+                <div class="player__btn" id="repeatBtn">
+                  <svg
+                    class="player__btn-icon"
+                    width="16"
+                    height="16"
+                    aria-hidden="true"
+                  >
+                    <use xlink:href="./images/sprite.svg#repeat"></use>
+                  </svg>
+                </div>
+              </div> -->
+    <!-- Progress -->
+    <!-- <div class="player__controlsProgress">
+                <div class="player__timer" id="timer">0:00</div>
+                <div class="player__waveform" id="waveform"></div>
+                <div class="player__bar" id="bar"></div>
+                <div class="player__progress" id="progress"></div>
+                <div class="player__duration" id="duration">0:00</div>
+              </div>
+            </div>
+          </div> -->
+
+    <!-- Volume -->
+    <!-- <div class="player__volume">
+            <svg class="player__icon" width="16" height="16" aria-hidden="true">
+              <use xlink:href="./images/sprite.svg#speakerLow"></use>
+            </svg>
+            <div class="player__progress-track">
+              <input
+                type="range"
+                class="player__volume-slider"
+                min="0"
+                max="100"
+                value="10"
+                id="volume"
+              />
+              <div class="player__progressBar" id="progressBar"></div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+    <!-- </footer> -->
     <script src="./ts/index.ts" type="module"></script>
     <script src="./howler.core.js"></script>
-    <script src="./siriwave.js"></script>
-    <script src="./player.js"></script>
+    <!-- <script src="./siriwave.js"></script>
+    <script src="./player.js" type="module"></script> -->
   </body>
 </html>
