@@ -1,0 +1,27 @@
+
+/* ------------------------------------ */
+@import "./global/_normalize.scss";
+@import "./global/_variables";
+@import "./global/_mixins";
+@import "./global/_fonts";
+@import "./global/_reboot";
+@import "./global/_container";
+@import "./global/_visually-hidden";
+
+
+/* Blocks */
+/* ------------------------------------ */
+
+@import "./blocks/_header";
+@import "./blocks/_custom-input";
+@import "./blocks/_btn";
+@import "./blocks/_catalog";
+@import "./blocks/_catalog__form";
+@import "./blocks/_custom-radio";
+@import "./blocks/_catalog__table";
+@import "./blocks/_catalog__pagination";
+@import "./blocks/_user-card";
+@import "./blocks/_player";
+
+
+

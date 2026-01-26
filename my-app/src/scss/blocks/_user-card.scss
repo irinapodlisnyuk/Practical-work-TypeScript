@@ -1,0 +1,112 @@
+.user-card {
+  bottom: 0;
+  display: flex;
+  flex-direction: row-reverse;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transition: opacity $transition-300 0.3s;
+  z-index: 10;
+
+  $root: &;
+
+  &--active {
+    opacity: 1;
+    pointer-events: all;
+    transition: opacity $transition-300;
+
+    #{$root}__wrapper {
+      transform: translateX(0);
+      transition-delay: 0.3s;
+    }
+  }
+
+  &::before {
+    background-color: rgba($color-black, 0.7);
+    content: "";
+    height: 100%;
+    right: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  &__wrapper {
+    background-color: $color-whisper;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 25px 15px 30px;
+    position: relative;
+    transform: translateX(100%);
+    transition: transform $transition-300;
+    z-index: 2;
+  }
+
+  &__heading {
+    align-items: center;
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    margin: 0;
+  }
+
+  &__title {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 26px;
+    margin: 0;
+  }
+
+  &__close {
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    height: 24px;
+    justify-content: center;
+    padding: 0;
+    width: 24px;
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &__bottom {
+    display: flex;
+    gap: 15px;
+  }
+
+  &__exit,
+  &__buttonRedactionEl {
+    background-color: $color-burnt-orange;
+    padding: 16px 10px;
+    transition: background-color $transition-300;
+    border-radius: 30px;
+    border: none;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 12px;
+    letter-spacing: 0.01em;
+    color: $color-white;
+
+    &:hover {
+      background-color: $color-international-orangee;;
+    }
+  }
+
+  &__error {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 12px;
+    color: $color-burnt-orange;
+    word-break: break-all;
+     width: 281px;
+     line-height: 1.5;
+  }
+}

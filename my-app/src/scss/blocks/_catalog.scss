@@ -1,0 +1,56 @@
+.catalog {
+
+  @include vp-767 {
+  background-color: $color-whisper;
+  }
+
+  &__wrapper {
+    height: 100%;
+    margin: 0px -30px;
+    display: grid;
+    grid-template-columns: 289px 1fr;
+    
+    @include vp-1023 {
+      display: flex;
+      flex-direction: column;
+      gap: 19px;
+      margin: 0;
+    }
+
+    @include vp-767 {
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+
+  &__wrapper-center {
+    padding: 35px 0 0 46px;
+  
+      @include vp-1023 {
+        padding: 35px 0 0;
+    }
+
+    @include vp-767 {
+      display: none;
+    }
+  }
+
+  &__title {
+    margin: 0 0 17px;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 36px;
+    letter-spacing: 0.02em;
+    color: $color-tangaroa;
+
+    @include vp-1023 {
+      display: none;
+    }
+
+    @include vp-767 {
+      display: none;
+    }
+  }
+}

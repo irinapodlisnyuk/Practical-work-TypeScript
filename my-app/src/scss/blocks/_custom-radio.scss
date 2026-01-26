@@ -1,0 +1,117 @@
+.custom-radio {
+  .custom-radio__field:checked + .custom-radio__label {
+    background: $color-white;
+
+     @include vp-1023 {
+       background: $color-white;
+     }
+
+    @include vp-767 {
+      background-color: $color-burnt-orange;
+
+      .play {
+        display: block;
+      }
+    }
+  }
+
+  &__field:hover,
+  &__field:focus {
+    .custom-radio__text::after {
+      transform: scale(1);
+    }
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 9px 9px 9px 30px;
+    cursor: pointer;
+
+        @include vp-1023 {
+      display: flex;
+      gap: 8px;
+      border-radius: 30px;
+      padding: 0 20px;
+      height: 44px;
+    }
+
+    @include vp-767 {
+      display: flex;
+      gap: 8px;
+      border-radius: 30px;
+      background-color: $color-white;
+      padding: 0 20px;
+    }
+
+    &:hover,
+    &:focus {
+      .custom-radio__text::after {
+        transform: scale(1);
+
+        @include vp-767 {
+          transform: none;
+        }
+      }
+    }
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: $color-tangaroa;
+    transition: color $transition-300;
+    position: relative;
+    user-select: none;
+     letter-spacing: 0.02em;
+
+     @include vp-1023 {
+        &:hover {
+        color: $color-tangaroa;
+      }
+     }
+
+    @include vp-767 {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 12px;
+      letter-spacing: 0.01em;
+
+      &:hover {
+        color: $color-tangaroa;
+      }
+    }
+
+    &:hover {
+      color: $color-dark-gray;
+    }
+
+    &::after {
+      content: "";
+      height: 1px;
+      width: 100%;
+      background-color: currentColor;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      transform: scale(0, 1);
+      transform-origin: left;
+      transition: transform $transition-300;
+    }
+  }
+
+  &__icon {
+    @include vp-767 {
+      display: none;
+    }
+  }
+
+  .play {
+    display: none;
+    @include vp-767 {
+      display: none;
+    }
+  }
+}

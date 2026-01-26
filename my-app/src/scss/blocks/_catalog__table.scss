@@ -1,0 +1,34 @@
+.catalog__table {
+  width: 100%;
+  margin: 0 0 20px;
+
+  &-list {
+    cursor: pointer;
+    display: grid;
+    grid-template-columns: 40px 434px 262px 239px 99px;
+    justify-items: start;
+    align-items: center;
+    border-bottom: 1px solid $color-whisper;
+    width: 100%;
+
+    @include vp-1023 {
+      grid-template-columns: 40px 1fr 1fr 239px 99px;
+    }
+
+    @include vp-767 {
+      display: none;
+    }
+  }
+
+  &-item {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: $color-dark-Gray;
+    padding: 10px 0 5px 9px;
+  }
+
+  
+}

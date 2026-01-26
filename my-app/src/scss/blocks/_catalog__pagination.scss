@@ -1,0 +1,41 @@
+.catalog__pagination {
+  margin: 0 0 43px;
+
+     @include vp-767 {
+      display: none;
+    }
+  &-list {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  &-item {
+    min-width: 20px;
+    min-height: 20px;
+  }
+
+  &-link {
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    font-family: $ff-actor;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 12px;
+    letter-spacing: 0.01em;
+    color: $color-nero;
+    transition:  background-color $transition-300;
+
+    &:hover,
+    &:focus {
+        background-color: $color-whisper;
+    }
+     &:active {
+        background-color: $color-dark-gray;
+    }
+  }
+}
